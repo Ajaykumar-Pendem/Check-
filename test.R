@@ -5,10 +5,15 @@ print("hello World")
 
 library(shiny)
 
-ui <- fluidpage(
-  h1("Ajaykumar")
+ui <- fluidPage(
+  h1("Ajaykumar"),
+  plotOutput("plot")
 )
  server <- function(input,output,session){
+   
+   output$plot <- renderPlot({
+     
+   })
 }
 
 shinyApp(ui,server)
